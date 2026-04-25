@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/excla1m/PersonalProjects/Grapple submodule status)",
+      "Bash(git -C /Users/excla1m/PersonalProjects/Grapple status)",
+      "Bash(git -C /Users/excla1m/PersonalProjects/Grapple ls-files app/)",
+      "Bash(git -C /Users/excla1m/PersonalProjects/Grapple diff --cached -- .env.example requirements.txt)",
+      "Bash(awk -F= '{print $1, length\\($2\\) > 0 ? \"[set, \" length\\($2\\) \" chars]\" : \"[EMPTY]\"}')",
+      "Bash(awk -F= 'BEGIN{n=0} /^[[:space:]]*#/ || /^[[:space:]]*$/ {next} /^[A-Z_][A-Z0-9_]*=/ {n++; printf \"line %d: %s = \\(%d chars after =\\)\\\\n\", NR, $1, length\\($0\\) - length\\($1\\) - 1; next} {printf \"line %d: continuation/raw: starts with %.20s...\\\\n\", NR, $0}' /Users/excla1m/PersonalProjects/Grapple/.env)"
+    ]
+  }
+}
